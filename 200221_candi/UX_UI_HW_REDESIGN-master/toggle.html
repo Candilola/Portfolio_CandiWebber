@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            transition: 240ms;
+        }
+        
+        .ln {
+            border: 1px solid #bdbdbd;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        nav .container {
+            height: 96px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .brand,
+        .burger {
+            max-width: 256px;
+            margin-right: 1rem;
+        }
+        
+        .burger {
+            display: none;
+        }
+        
+        .links {
+            justify-content: flex-end;
+            align-items: center;
+            flex-grow: 1;
+        }
+        
+        .links * {
+            padding-right: 6rem;
+        }
+        
+        .links-mobile {
+            display: none;
+        }
+        
+        .links-mobile>* {
+            height: 4rem;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .burger {
+                display: inherit;
+            }
+            .links {
+                display: none;
+            }
+        }
+        
+        .toggle {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="container flex ln">
+            <div class="brand">LOGO</div>
+            <ul class="links flex">
+                <li class="ln">About</li>
+                <li class="ln">Contact</li>
+                <li class="ln">Resume</li>
+            </ul>
+            <div class="burger">
+                <a href="#;" class="icon" onclick=myFunction()><img src="./icon_ burger.png"></a>
+            </div>
+        </div>
+
+        <ul id="myLinks" class="links-mobile">
+            <li class="ln">About</li>
+            <li class="ln">Contact</li>
+            <li class="ln">Resume</li>
+        </ul>
+
+    </nav>
+
+    <script>
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+            console.log("toggler");
+            var element = document.getElementById("myLinks");
+            element.classList.toggle("toggle");
+        }
+    </script>
+
+</body>
+
+</html>

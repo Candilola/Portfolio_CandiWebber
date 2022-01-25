@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+        }
+        
+        .ln {
+            border: 1px solid #bdbdbd;
+        }
+        
+        body {
+            padding: 8rem 4rem;
+        }
+        
+        main {
+            height: 720px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        
+        .thumbnail {
+            grid-column: span 8;
+            background: url("./storydogs.png") no-repeat;
+            /* Or if you arent using shorthand like above, you can manually call the background-position attribute */
+            background-position: center;
+            background-size: contain;
+        }
+        
+        .details {
+            grid-column: span 4;
+            padding: 0 2rem;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* This is a special selector to select ALL children of .details and give them all some margin-bottom, for better spacing */
+        
+        .details * {
+            margin-bottom: 1.2rem;
+        }
+        /* cosmetics */
+        
+        h2 {
+            font-size: 3rem;
+        }
+        
+        h4 {
+            font-size: .96rem;
+        }
+        
+        p {
+            font-size: 1.4rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="ln">
+        <div class="thumbnail"></div>
+        <div class="details ln">
+            <h4>CASE STUDY</h4>
+            <h2>STORY DOGS</h2>
+            <p>Responsive website redesign of the Story Dogs not-for-profit organisation website</p>
+            <button>VIEW</button>
+        </div>
+    </main>
+
+</body>
+
+</html>
